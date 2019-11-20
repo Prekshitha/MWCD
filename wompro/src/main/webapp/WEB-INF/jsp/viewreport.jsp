@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<b>
-${name } <h1> your details are successfully submitted</h1>
+<b><h4>hi</h4>${name }<br> ${status }
+
 
 <a href="viewusers.do">view the submitted records</a>
 

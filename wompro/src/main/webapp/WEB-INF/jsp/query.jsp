@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="css/one.css">
 <title>Insert title here</title>
 </head>
 <body>
-<form action="workingwomen.do" method="GET">
+<form action="query.do" method="POST" enctype="multipart/form-data">
 
 
 <table>
@@ -17,6 +18,7 @@
 <td><input type="text" name="name" type="name" required></td>
 </tr>
 
+
 <tr>
 <th>AdharNo:</th>
 <td><input type="text" name="ano" type="ano" required></td>
@@ -25,16 +27,24 @@
 <tr>
 <th>Address</th>
 <td><textarea rows="4" cols="50" name="add" required></textarea></td>
+<td><input type="file" name="file" id="address_fname"></td>
 </tr>
 
 <tr>
 <th>DOB:</th>
 <td><input type="date" name="date" type="date" required></td>
+<td><input type="file" name="file" id="dob_fname"></td>
 </tr>
 
 <tr>
 <th>Caste:</th>
-<td><input type="text" name="caste" type="caste" required></td>
+<td><input type="text" name="caste" type="caste" required>
+<select name="caste">
+  <option value="OBC">OBC</option>
+  <option value="SC/ST">SC/ST</option>
+  <option value="Others">Others</option>
+</select></td>
+
 </tr>
 
 <tr>
@@ -97,6 +107,11 @@
 </tr>
 
 <tr>
+<td><form:label path="image">Upload Profile Image</form:label></td>
+<td><input type="file" name="file" id="image"></td>
+</tr>
+
+<tr>
 <th>DOB of child:</th>
 <td><input type="date" name="date1" type="date1" required></td>
 </tr>
@@ -107,7 +122,6 @@
 <th>Gross Income:</th>
 <td><input type="text" name="gi" type="gi"></td>
 </tr>
-
 
 
 

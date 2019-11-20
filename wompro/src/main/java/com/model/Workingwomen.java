@@ -40,6 +40,9 @@ import javax.persistence.TemporalType;
 		private String ngo;
 		private int trainingperiod;
 		private String status;
+		private String dob_fname;
+		private String address_fname;
+		private String image;
 		
 
 	    @OneToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
@@ -136,6 +139,30 @@ import javax.persistence.TemporalType;
 			this.status = status;
 		}
 
+		public String getDob_fname() {
+			return dob_fname;
+		}
+
+		public void setDob_fname(String dob_fname) {
+			this.dob_fname = dob_fname;
+		}
+
+		public String getAddress_fname() {
+			return address_fname;
+		}
+
+		public void setAddress_fname(String address_fname) {
+			this.address_fname = address_fname;
+		}
+
+		public String getImage() {
+			return image;
+		}
+
+		public void setImage(String image) {
+			this.image = image;
+		}
+
 		public List<Girlboydaycare> getGlist() {
 			return glist;
 		}
@@ -160,11 +187,10 @@ import javax.persistence.TemporalType;
 		public String toString() {
 			return "Workingwomen [wid=" + wid + ", name=" + name + ", adharno=" + adharno + ", address=" + address
 					+ ", dob=" + dob + ", caste=" + caste + ", contact=" + contact + ", phychal=" + phychal + ", ngo="
-					+ ngo + ", trainingperiod=" + trainingperiod + ", status=" + status + ", grossIncome=" + grossIncome
-					+ "]";
+					+ ngo + ", trainingperiod=" + trainingperiod + ", status=" + status + ", dob_fname=" + dob_fname
+					+ ", address_fname=" + address_fname + ", image=" + image + ", grossIncome=" + grossIncome + "]";
 		}
 
-		
 		
 	
 

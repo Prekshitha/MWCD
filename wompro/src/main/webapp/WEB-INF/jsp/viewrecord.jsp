@@ -27,8 +27,13 @@
 <td>work period</td>
 <td>Gross Income</td>
 <td>Status</td>
+<td>Age proof</td>
+<td>Address Proof</td>
+<td>image</td>
+<td>approve</td>
 </tr>
 <c:forEach items="${obj}" var="user">
+${user }
 <div><tr>
     <td>${user.wid}</td>
     <td>${user.name}</td>
@@ -40,7 +45,12 @@
 	<td>${user.phychal}</td>
     <td>${user.trainingperiod}</td>
     <td>${user.grossIncome}</td> 
-    <td>${user.status}</td></tr>
+    <td>${user.status}</td>
+   <!--<td><img src="${pageContext.request.contextPath}/download/image.do?fileName=${user.image}" height="100" width="100"></td>-->
+    <td><a target="_self" href="${pageContext.request.contextPath}/download/pdf.do?fileName=${user.dob_fname}">Download Date Of Birth Document</a></td>
+    <td><a target="_self" href="${pageContext.request.contextPath}/download/pdf.do?fileName=${user.address_fname}">Download Address Document</a></td>
+    <td><a target="_self" href="${pageContext.request.contextPath}/download/image.do?fileName=${user.image}">Download Image</a></td>
+   <td><a href=add.do>add</a></td></tr>
 
 	
 	
